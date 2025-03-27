@@ -5,13 +5,14 @@ import java.util.Scanner;
 
 public class Odd_or_even {
     public static void main(String[] args) {
+        //This a simple java program for odd or even game playing game with computer
         Scanner sc = new Scanner(System.in);
         Random rom = new Random();
         int userNumber;
         Boolean userWins = false;
         int att = 0;
         System.out.println("Welcome to the Odd or Even Game!");
-
+        //The program will run until user wins
         while (!userWins) {
             String userchoice = UserChoice();
             while (true) {
@@ -33,7 +34,7 @@ public class Odd_or_even {
 
             if ((isEven && userchoice.equals("even")) || (!isEven && userchoice.equals("odd"))) {
                 System.out.println(" And  🎉 You win!");
-                System.out.println("You win the game in " + (att == 1 ? "First attempt." : ("" + att + " attempts.")));
+                System.out.println("You win the game in" + (att == 1 ? " First attempt." : (" " + att + " attempts.")));
                 userWins = true;
             } else {
                 System.out.println(" And 😢 Computer wins!");
